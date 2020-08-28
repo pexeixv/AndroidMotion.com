@@ -13,23 +13,34 @@ a{
 
 
 /* MEDIA QUERIES */
+
+@media screen and (min-width: 768px){
+    #logo, nav{
+        margin: 20px 0;
+    }
+    #lander{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header {
-        height: 22vh;
         flex-direction: column;
-        justify-content: space-between;
+        align-content: space-between;
     }
-
     #logo{
         flex-flow: column wrap;
+        margin: 0;
     }
     #logo img{
         height: 1vh;
+        padding-top: 5px;
     }
 
     #lander{
         display: flex;
-        flex-flow: column wrap;
+        flex-direction: column;
         height: 78vh;
     }
     #lander #hero{
@@ -40,6 +51,10 @@ a{
         width: 99vw;
         display: block;
     }
+    #logo, nav{
+        margin: 0 0;
+    }
+    
 }
 
 
@@ -61,7 +76,6 @@ body {
 
 /* HEADER */
 header {
-    height: 12vh;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
@@ -70,8 +84,8 @@ header {
     position: fixed;
 }
 
+
 #logo {
-    margin: 7px;
     display: flex;
     align-items: center;
     padding: 0 40px;
@@ -81,7 +95,6 @@ header {
     height: 5vh;
 }
 #logo span {
-
     padding: 0 17px;
     font-size: x-large;
 }
@@ -99,7 +112,6 @@ nav ul {
     padding: 0 40px;
     display: flex;
     flex-direction: row;
-    margin: 10px;
 }
 
 
@@ -107,8 +119,6 @@ nav ul {
 /* LANDING AREA */
 #lander {
     height: 88vh;
-    display: flex;
-    flex-direction: row;
     margin: auto;
     margin-top: 12vh;
 }
