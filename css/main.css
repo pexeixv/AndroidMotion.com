@@ -12,50 +12,7 @@ a{
 }
 
 
-/* MEDIA QUERIES */
 
-@media screen and (min-width: 768px){
-    #logo, nav{
-        margin: 20px 0;
-    }
-    #lander{
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-content: space-between;
-    }
-    #logo{
-        flex-flow: column wrap;
-        margin: 0;
-    }
-    #logo img{
-        height: 1vh;
-        padding-top: 5px;
-    }
-
-    #lander{
-        display: flex;
-        flex-direction: column;
-        height: 78vh;
-    }
-    #lander #hero{
-        width: 99vw;
-        display: block;
-    }
-    #lander #details{
-        width: 99vw;
-        display: block;
-    }
-    #logo, nav{
-        margin: 0 0;
-    }
-    
-}
 
 
 
@@ -98,6 +55,9 @@ header {
     padding: 0 17px;
     font-size: x-large;
 }
+#logo, nav{
+    margin: 20px 0;
+}
 
 nav li a {
     text-decoration: none;
@@ -121,11 +81,10 @@ nav ul {
     height: 88vh;
     margin: auto;
     margin-top: 12vh;
+    display: flex;
+    flex-direction: row;
 }
 #lander #hero {
-    display: flex;
-    width: 49vw;
-    justify-content: center;
     align-items: center;
 }
 #lander img {
@@ -134,11 +93,14 @@ nav ul {
     height: auto;
 
 }
-#lander #details {
-    width: 49vw;
+#lander #details,#lander #hero{
     display: flex;
-    flex-direction: column;
+    width: 49vw;
     justify-content: center;
+}
+
+#lander #details{
+    flex-direction: column;
 }
 #details h1{
     font-size: xxx-large;
@@ -168,4 +130,53 @@ nav ul {
 /* ABOUT SECTION */
 #about{
     height: 88vh;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-content: space-between;
+    }
+    #logo{
+        flex-flow: column wrap;
+    }
+    #logo img{
+        padding-top: 5px;
+    }
+
+    #lander{
+        display: flex;
+        flex-direction: column;
+        height: 78vh;
+    }
+    #lander #hero{
+        width: 80vw;
+    }
+    #lander #details{
+        width: 80vw;
+    }
+    #logo, nav{
+        margin: 0 0;
+    }
+
+    #lander #hero, #lander #details{
+        margin: 0 auto;
+    }
+    #lander #details{
+        align-items: center;
+    }
+    #details h1{
+        font-size: xx-large;
+    }
+    #details h3{
+        font-size: small;
+        margin-top: -7px;
+    }
+    .btn a{
+        font-size: small;
+    }
 }
