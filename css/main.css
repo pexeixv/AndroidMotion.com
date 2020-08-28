@@ -1,3 +1,8 @@
+:root{
+    --primary: rgb(227, 255, 235);
+}
+
+
 /* CSS RESET */
 * {
     padding: 0;
@@ -18,7 +23,7 @@ a{
 
 /* FULL */
 body {
-    background-color: rgb(179, 255, 201);
+    background-color: var(--primary)
     
 }
 ::selection{
@@ -179,5 +184,8 @@ nav ul {
     }
     .btn a{
         font-size: small;
+    }
+    #lander {
+        margin-top: 15vh;
     }
 }
