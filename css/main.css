@@ -149,6 +149,7 @@ nav ul {
     }
 
     #lander{
+        padding-top: 100px;
         display: flex;
         flex-direction: column;
         height: 78vh;
