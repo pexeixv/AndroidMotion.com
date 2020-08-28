@@ -1,0 +1,148 @@
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    header {
+        height: 22vh;
+        flex-direction: column;
+    }
+
+    #lander{
+        flex-flow: column wrap;
+    }
+    #lander #hero{
+        width: 99vw;
+    }
+    #lander #details{
+        width: 99vw;
+    }
+}
+
+
+
+/* FULL */
+body {
+    background-color: rgb(179, 255, 201);
+    
+}
+::selection{
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+.septr{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 1px;
+}
+
+
+/* HEADER */
+header {
+    height: 12vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+}
+#logo img {
+    height: 5vh;
+}
+#logo span {
+
+    padding: 0 17px;
+    font-size: x-large;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+nav li {
+    list-style: none;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+nav ul {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* LANDING AREA */
+#lander {
+    height: 88vh;
+    width: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    margin-top: 12vh;
+}
+#lander #hero {
+    display: flex;
+    width: 49vw;
+    justify-content: center;
+    align-items: center;
+}
+#lander img {
+    display: block;
+    width:450px;
+    height: auto;
+
+}
+#lander #details {
+    width: 49vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#details h1{
+    font-size: xxx-large;
+    font-weight: normal;
+}
+.btn{
+    background-color: rgb(26, 26, 26);
+    display: inline;
+    width: 120px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px;
+    margin: 6px 0;
+} 
+.btn a{
+    color: rgb(240, 240, 240);
+}
+#lander h3{
+    margin-top: -15px;
+}
+#details .septr{
+    width: 40%;
+    margin: 5px 0;
+}
+
+
+/* ABOUT SECTION */
+#about{
+    height: 88vh;
+}
