@@ -17,16 +17,28 @@ a{
     header {
         height: 22vh;
         flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #logo{
+        flex-flow: column wrap;
+    }
+    #logo img{
+        height: 1vh;
     }
 
     #lander{
+        display: flex;
         flex-flow: column wrap;
+        height: 78vh;
     }
     #lander #hero{
         width: 99vw;
+        display: block;
     }
     #lander #details{
         width: 99vw;
+        display: block;
     }
 }
 
@@ -59,6 +71,7 @@ header {
 }
 
 #logo {
+    margin: 7px;
     display: flex;
     align-items: center;
     padding: 0 40px;
@@ -86,6 +99,7 @@ nav ul {
     padding: 0 40px;
     display: flex;
     flex-direction: row;
+    margin: 10px;
 }
 
 
@@ -93,9 +107,8 @@ nav ul {
 /* LANDING AREA */
 #lander {
     height: 88vh;
-    width: fit-content;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     margin: auto;
     margin-top: 12vh;
 }
