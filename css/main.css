@@ -21,7 +21,6 @@ ul {
 
 header {
   height: 10vh;
-  background: #89ff89;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,7 +29,9 @@ header {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 header .headerWrapper {
@@ -48,6 +49,7 @@ header .headerWrapper {
 }
 
 header .headerWrapper #logo {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,8 +74,32 @@ header .headerWrapper ul {
 }
 
 header .headerWrapper ul li {
+  z-index: 2;
   padding: 1rem;
   font-size: 1.5rem;
+}
+
+.aniHead {
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: white;
+  z-index: 1;
+  border-radius: 0 0 200px 0;
+  -webkit-transform: translateX(-72%);
+          transform: translateX(-72%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.aniHead.aniHeadAt {
+  -webkit-transform: none;
+          transform: none;
+  border-radius: 0 0 0 200px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .header.active {
@@ -89,7 +115,7 @@ header .headerWrapper ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #89ff89;
+  background: #90EE90;
 }
 
 #lander #hero {
@@ -174,13 +200,16 @@ header .headerWrapper ul li {
 
 @media only screen and (max-width: 1150px) {
   html {
-    font-size: 40%;
+    font-size: 100%;
   }
   .headerWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .aniHead {
+    display: none;
   }
   #lander {
     padding-top: 25vh;
@@ -207,6 +236,9 @@ header .headerWrapper ul li {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  #lander #details strong {
+    display: block;
   }
   #lander .arrArea {
     position: relative;
