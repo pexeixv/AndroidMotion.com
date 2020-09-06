@@ -386,7 +386,7 @@ footer {
   #lander .arrArea svg {
     height: 8rem;
   }
-  #about .cards {
+  #features .cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
