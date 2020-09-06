@@ -1,0 +1,63 @@
+#features
+    height: calc( 100vh - 6.7rem )
+    height: 100vh
+    width: 100vw
+    background: white
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    .featuresContent
+        height: fit-content
+        width: fit-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+
+        h2
+            font-size: 4rem
+            text-align: center
+            z-index: 1
+            display: block
+            margin: 0 0 5rem
+        .cards
+            display: flex
+            width: max-content
+
+            .card
+                width: 25rem    
+                height: 30rem
+                margin: 3rem
+                background: white
+                box-shadow: 0 0 6rem -1.5rem rgba(0, 0, 0, 0.5)
+                display: flex
+                flex-direction: column
+                align-items: center
+                border-radius: 2.5rem
+                overflow: hidden
+                text-align: center
+                cursor: pointer
+                transition: all 0.3s ease-in-out
+                &:hover
+                    transform: scale(1.08)
+
+                img
+                    height: 150px
+                    width: 250px
+
+                h3
+                    padding: 1.5rem 1.5rem 0
+                    text-transform: uppercase
+                    font-size: 1.4rem
+                    &::after
+                        content: ''
+                        width: 12rem
+                        height: 0.3rem
+                        border-radius: 100px
+                        background: rgba(0, 0, 0, 0.15)
+                        display: block
+                        margin: 0.7rem auto
+                h4
+                    padding: 0.5rem 1rem

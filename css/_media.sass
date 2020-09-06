@@ -1,14 +1,16 @@
+@media only screen and (min-width: 1150px)
+    .aniHead
+        border-radius: 0 0 200px 0
+        transform: translateX(-72%)
+    
+    
 @media only screen and (max-width: 1150px)
     html
         font-size: 40%
 
-    .header.active
-        background: #fff
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25)
     .headerWrapper
         flex-direction: column
-    .aniHead
-        display: none
+
     #lander
         padding-top: 25vh
         flex-direction: column
@@ -36,3 +38,7 @@
             svg
                 height: 8rem
 
+
+    #about
+        .cards
+            flex-direction: column
