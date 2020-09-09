@@ -1,3 +1,7 @@
+document.querySelector('.warnCont').addEventListener('click', ()=>{
+  $('.warnWrap').css('display', 'none');
+  $('html').css('overflow-y', 'scroll');
+})
 
 $(document).scroll(function () {
     var top1 = $('#lander').offset().top;

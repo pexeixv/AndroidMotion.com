@@ -9,6 +9,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,8 +21,76 @@ ul {
   list-style: none;
 }
 
-body {
-  overflow-x: hidden;
+html {
+  overflow-y: hidden;
+}
+
+div.warnWrap {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 600vh;
+  left: 0;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background: #00000057;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+div.warnWrap .warn1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.warnWrap .warn1 div#warn {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  font-size: 150%;
+  background: #cccccc;
+}
+
+div.warnWrap .warn1 div#warn a {
+  background: black;
+  color: white;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 1rem 2rem;
 }
 
 header {
@@ -37,6 +106,7 @@ header {
   z-index: 2;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  overflow-x: hidden;
 }
 
 header .headerWrapper {
@@ -248,7 +318,9 @@ header .headerWrapper ul li {
   text-align: center;
   z-index: 1;
   display: block;
-  margin: 0 0 5rem;
+  display: block;
+  position: relative;
+  bottom: 4rem;
 }
 
 #features .featuresContent .cards {
@@ -315,9 +387,67 @@ header .headerWrapper ul li {
   padding: 0.5rem 1rem;
 }
 
-section#services {
-  height: 300vh;
+section#gallery {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100vw;
   background: #90ee90;
+  padding: 5rem 0 7rem;
+}
+
+section#gallery h2 {
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+  display: block;
+  padding: 3rem 0 6rem;
+}
+
+section#gallery .cont {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: white;
+  padding: 1rem;
+}
+
+section#gallery .cont .col {
+  width: 33%;
+}
+
+section#gallery .cont .col img {
+  width: 100%;
+  padding: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+section#gallery .cont .col img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+section#contact {
+  height: 100vh;
+}
+
+section#contact h2 {
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+  display: block;
+  padding: 3rem 0 6rem;
 }
 
 footer {
@@ -330,6 +460,9 @@ footer {
     border-radius: 0 0 200px 0;
     -webkit-transform: translateX(-72%);
             transform: translateX(-72%);
+  }
+  html {
+    overflow-y: scroll;
   }
 }
 
@@ -391,6 +524,9 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  div.warnWrap {
+    visibility: visible;
   }
 }
 /*# sourceMappingURL=main.css.map */
