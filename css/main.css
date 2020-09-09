@@ -29,7 +29,6 @@ div.warnWrap {
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 600vh;
   left: 0;
   z-index: 3;
   display: -webkit-box;
@@ -355,6 +354,7 @@ header .headerWrapper ul li {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 #features .featuresContent .cards .card:hover {
@@ -363,17 +363,21 @@ header .headerWrapper ul li {
 }
 
 #features .featuresContent .cards .card img {
-  height: 150px;
-  width: 250px;
+  height: 50%;
 }
 
-#features .featuresContent .cards .card h3 {
+#features .featuresContent .cards .card .cardText {
+  height: 50%;
+  width: 100%;
+}
+
+#features .featuresContent .cards .card .cardText h3 {
   padding: 1.5rem 1.5rem 0;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
 
-#features .featuresContent .cards .card h3::after {
+#features .featuresContent .cards .card .cardText h3::after {
   content: '';
   width: 12rem;
   height: 0.3rem;
@@ -383,7 +387,7 @@ header .headerWrapper ul li {
   margin: 0.7rem auto;
 }
 
-#features .featuresContent .cards .card h4 {
+#features .featuresContent .cards .card .cardText h4 {
   padding: 0.5rem 1rem;
 }
 
@@ -408,6 +412,7 @@ section#gallery .cont {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  border-radius: 1.5rem;
   margin: auto;
   width: 70%;
   display: -webkit-box;
