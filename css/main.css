@@ -105,7 +105,6 @@ header {
   z-index: 2;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  overflow-x: hidden;
 }
 
 header .headerWrapper {
@@ -176,7 +175,7 @@ header .headerWrapper ul li {
 }
 
 #lander {
-  padding-top: 0vh;
+  padding-top: 5rem;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -248,12 +247,18 @@ header .headerWrapper ul li {
 
 #lander #details a {
   background: #e7e7e7;
-  padding: 1.5rem;
+  padding: 1rem 0.7rem;
   margin: 1.5rem 0;
   width: 17rem;
   text-align: center;
   font-size: 2rem;
   border-radius: 2rem;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+#lander #details a:hover {
+  background: #c1c1c1;
 }
 
 #lander .arrArea {
@@ -271,8 +276,7 @@ header .headerWrapper ul li {
 }
 
 #features {
-  height: calc( 100vh - 6.7rem);
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: white;
   display: -webkit-box;
@@ -291,12 +295,8 @@ header .headerWrapper ul li {
 }
 
 #features .featuresContent {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,6 +313,7 @@ header .headerWrapper ul li {
 }
 
 #features .featuresContent h2 {
+  margin-top: 7rem;
   font-size: 4rem;
   text-align: center;
   z-index: 1;
@@ -323,12 +324,13 @@ header .headerWrapper ul li {
 }
 
 #features .featuresContent .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  max-width: 900px;
 }
 
 #features .featuresContent .cards .card {
@@ -524,14 +526,15 @@ footer {
   #lander .arrArea svg {
     height: 8rem;
   }
-  #features .cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   div.warnWrap {
     visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #features .featuresContent .cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=main.css.map */

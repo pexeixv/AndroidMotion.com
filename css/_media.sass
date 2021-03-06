@@ -43,10 +43,11 @@
             svg
                 height: 8rem
 
-
-    #features
-        .cards
-            flex-direction: column
-
     div.warnWrap
         visibility: visible
+
+
+@media only screen and (max-width: 650px)
+    #features
+        .featuresContent .cards
+            grid-template-columns: 1fr

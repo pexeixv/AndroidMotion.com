@@ -3,7 +3,7 @@
         @content;
     
 #lander
-    padding-top: 0vh
+    padding-top: 5rem
     width: 100vw
     height: 100vh
     display: flex
@@ -46,12 +46,15 @@
             margin: 0.5rem 0
         a
             background: color(primary)
-            padding: 1.5rem
+            padding: 1rem 0.7rem 
             margin: 1.5rem 0
             width: 17rem
             text-align: center
             font-size: 2rem
             border-radius: 2rem
+            transition: all 500ms ease-out
+            &:hover
+                background: darken(color(primary), 15)
     .arrArea
         height: 10rem
         width: 10rem
